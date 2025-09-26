@@ -13,7 +13,7 @@ The system is designed to predict the next likely symptom(s) for a patient based
 ## Directory Structure
 <pre>
 Agnos/
-├── data/                  # Contains the test dataset
+├── Data/                  # Contains the test dataset
 ├── Model_Artifacts/       # Stores the pre-trained model and config files
 ├── app/                   # The production application code (FastAPI)
 ├── Main_Test_File.ipynb   # Jupyter Notebook for this main task assignment (This is the main file for this assignment, containing the full, complete implementation for this assignment)
@@ -36,7 +36,7 @@ Note: The primary file for this assignment is `Main_Test_File.ipynb`. It contain
     Clone the repository and set up a virtual environment.
     <pre>
     # Clone the repository
-    git clone [https://github.com/Simmmyirmm/Agnos_Test.git](https://github.com/Simmmyirmm/Agnos_Test.git)
+    git clone https://github.com/Simmmyirmm/Agnos_Test.git
     cd Agnos
 
     # Create and activate a virtual environment
