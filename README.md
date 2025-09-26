@@ -14,7 +14,7 @@ The system is designed to predict the next likely symptom(s) for a patient based
 <pre>
 Agnos/
 ├── data/                  # Contains the test dataset
-├── model_artifacts/       # Stores the pre-trained model and config files
+├── Model_Artifacts/       # Stores the pre-trained model and config files
 ├── app/                   # The production application code (FastAPI)
 ├── Main_Test_File.ipynb   # Jupyter Notebook for this main task assignment (This is the main file for this assignment, containing the full, complete implementation for this assignment)
 ├── Main_Test_Agnos_Slide.pptx # Main Solution Overview and Explanation for this assignment
@@ -36,7 +36,7 @@ Note: The primary file for this assignment is `Main_Test_File.ipynb`. It contain
     Clone the repository and set up a virtual environment.
     <pre>
     # Clone the repository
-    git clone [<your-repo-url>](https://github.com/Simmmyirmm/Agnos_Test.git)
+    git clone [https://github.com/Simmmyirmm/Agnos_Test.git](https://github.com/Simmmyirmm/Agnos_Test.git)
     cd Agnos
 
     # Create and activate a virtual environment
@@ -51,7 +51,7 @@ Note: The primary file for this assignment is `Main_Test_File.ipynb`. It contain
 
     Before running the API, you need to train the model.
 
-    Run the Training Notebook: Open and run all cells in the `Main_Test_File.ipynb` notebook. This will perform data cleaning, train the cosine similarity model, and save the final artifacts (`symptom_similarity_model.csv` and `configs.json`) into the `Model_Artifacts/` directory.
+    **Run the Training Notebook**: Open and run all cells in the `Main_Test_File.ipynb` notebook. This will perform data cleaning, train the cosine similarity model, and save the final artifacts (`symptom_similarity_model.csv` and `configs.json`) into the `Model_Artifacts/` directory.
 
 4. **Running the API**
     Once the model artifacts have been saved, you can run the API server.
