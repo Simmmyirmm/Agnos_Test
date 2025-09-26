@@ -51,7 +51,7 @@ Note: The primary file for this assignment is `Main_Test_File.ipynb`. It contain
 
     Before running the API, you need to train the model.
 
-    Run the Training Notebook: Open and run all cells in the Main_Test_File.ipynb notebook. This will perform data cleaning, train the cosine similarity model, and save the final artifacts (symptom_similarity_model.csv and configs.json) into the Model_Artifacts/ directory.
+    Run the Training Notebook: Open and run all cells in the `Main_Test_File.ipynb` notebook. This will perform data cleaning, train the cosine similarity model, and save the final artifacts (`symptom_similarity_model.csv` and `configs.json`) into the `Model_Artifacts/` directory.
 
 4. **Running the API**
     Once the model artifacts have been saved, you can run the API server.
@@ -61,9 +61,8 @@ Note: The primary file for this assignment is `Main_Test_File.ipynb`. It contain
 
     # Run the FastAPI server using Uvicorn
     uvicorn Main_Test_API:app --reload
-
-    The API will be available at http://127.0.0.1:8000.
     </pre>
+    The API will be available at `http://127.0.0.1:8000`.
 
 ## 🧪 How to Test The Work
 You can test the API in two ways:
@@ -72,13 +71,13 @@ You can test the API in two ways:
 
     FastAPI automatically generates interactive documentation.
 
-    With the server running, open your web browser and navigate to http://127.0.0.1:8000/docs.
+    1. With the server running, open your web browser and navigate to `http://127.0.0.1:8000/docs`.
 
-    Expand the /recommend endpoint.
+    2. Expand the `/recommend` endpoint.
 
-    Click "Try it out" and modify the request body to test different scenarios.
+    3. Click "Try it out" and modify the request body to test different scenarios.
 
-    Click "Execute" to see the live JSON response.
+    4. Click "Execute" to see the live JSON response.
 
 2. **Using curl (Command Line) (Not Recommended)**
 
