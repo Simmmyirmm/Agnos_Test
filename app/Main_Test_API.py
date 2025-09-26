@@ -9,7 +9,7 @@ app = FastAPI(
     version="1.0.0"
 )
 
-MODEL_ARTIFACTS = load_model_artefacts()
+MODEL_ARTEFACTS = load_model_artefacts()
 
 class RecommendRequest(BaseModel):
     search_term: str
@@ -21,7 +21,7 @@ class RecommendRequest(BaseModel):
 def recommend_symptoms_api(request: RecommendRequest):
     recommendations = get_recommendations_pipeline(
         request.search_term,
-        MODEL_ARTIFACTS,
+        MODEL_ARTEFACTS,
         age=request.age,
         gender=request.gender,
         top_n=request.top_n_next_symptoms
