@@ -11,7 +11,7 @@ The system is designed to predict the next likely symptom(s) for a patient based
 3. **Personalisation**: A rule-based post-filtering system, filters and re-ranks recommendations based on the user's age and gender.
 
 ## Directory Structure
-<pre> ```
+<pre>
 Agnos/
 ├── data/                  # Contains the test dataset
 ├── model_artifacts/       # Stores the pre-trained model and config files
@@ -21,19 +21,19 @@ Agnos/
 ├── .gitignore             # Specifies files to be ignored by Git
 ├── README.md              # This documentation file
 └── requirements.txt       # Python dependencies for the project
-``` </pre>
+</pre>
 
 Note: The primary file for this assignment is `Main_Test_File.ipynb`. It contains all the code for data preparation, model training, the complete recommendation pipeline, and the final evaluations. Please refer to this notebook as the main body of work.
 
 ## 🚀 How to Set Up and Run
 1. **Prerequisites**
-Python 3.8+
+    Python 3.8+
 
-`pip` and `virtualenv`
+    `pip` and `virtualenv`
 
 2. **Setup & Installation**
 Clone the repository and set up a virtual environment.
-<pre> ```
+<pre>
 Clone the repository
 git clone [<your-repo-url>](https://github.com/Simmmyirmm/Agnos_Test.git)
 cd Agnos
@@ -44,7 +44,7 @@ source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 
 # Install the required dependencies
 pip install -r requirements.txt
-``` </pre>
+</pre>
 
 3. **Data and Training (Run Once)**
 Before running the API, you need to train the model.
@@ -53,7 +53,7 @@ Run the Training Notebook: Open and run all cells in the Main_Test_File.ipynb no
 
 4. **Running the API**
 Once the model artifacts have been saved, you can run the API server.
-<pre> ```
+<pre>
 # Navigate to the app directory
 cd app
 
@@ -61,7 +61,7 @@ cd app
 uvicorn Main_Test_API:app --reload
 
 The API will be available at http://127.0.0.1:8000.
-``` </pre>
+</pre>
 
 ## 🧪 How to Test The Work
 You can test the API in two ways:
@@ -81,7 +81,7 @@ Click "Execute" to see the live JSON response.
 You can also test the API from your terminal using a curl command.
 
 Example Request (with personalisation):
-<pre> ```
+<pre>
 curl -X POST "[http://127.0.0.1:8000/recommend](http://127.0.0.1:8000/recommend)" \
 -H "Content-Type: application/json" \
 -d '{
@@ -89,13 +89,13 @@ curl -X POST "[http://127.0.0.1:8000/recommend](http://127.0.0.1:8000/recommend)
   "age": 47,
   "gender": "female"
 }'
-``` </pre>
+</pre>
 
 Example Request (without personalisation):
-<pre> ```
+<pre>
 curl -X POST "[http://127.0.0.1:8000/recommend](http://127.0.0.1:8000/recommend)" \
 -H "Content-Type: application/json" \
 -d '{
   "search_term": "คันคอ, เจ็บคอ"
 }'
-``` </pre>
+</pre>
