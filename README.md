@@ -27,75 +27,79 @@ Note: The primary file for this assignment is `Main_Test_File.ipynb`. It contain
 
 ## 🚀 How to Set Up and Run
 1. **Prerequisites**
-    Python 3.8+
+    - Python 3.8+
 
-    `pip` and `virtualenv`
+    - `pip` and `virtualenv`
 
 2. **Setup & Installation**
-Clone the repository and set up a virtual environment.
-<pre>
-Clone the repository
-git clone [<your-repo-url>](https://github.com/Simmmyirmm/Agnos_Test.git)
-cd Agnos
 
-# Create and activate a virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    Clone the repository and set up a virtual environment.
+    <pre>
+    # Clone the repository
+    git clone [<your-repo-url>](https://github.com/Simmmyirmm/Agnos_Test.git)
+    cd Agnos
 
-# Install the required dependencies
-pip install -r requirements.txt
-</pre>
+    # Create and activate a virtual environment
+    python -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+
+    # Install the required dependencies
+    pip install -r requirements.txt
+    </pre>
 
 3. **Data and Training (Run Once)**
-Before running the API, you need to train the model.
 
-Run the Training Notebook: Open and run all cells in the Main_Test_File.ipynb notebook. This will perform data cleaning, train the cosine similarity model, and save the final artifacts (symptom_similarity_model.csv and configs.json) into the Model_Artifacts/ directory.
+    Before running the API, you need to train the model.
+
+    Run the Training Notebook: Open and run all cells in the Main_Test_File.ipynb notebook. This will perform data cleaning, train the cosine similarity model, and save the final artifacts (symptom_similarity_model.csv and configs.json) into the Model_Artifacts/ directory.
 
 4. **Running the API**
-Once the model artifacts have been saved, you can run the API server.
-<pre>
-# Navigate to the app directory
-cd app
+    Once the model artifacts have been saved, you can run the API server.
+    <pre>
+    # Navigate to the app directory
+    cd app
 
-# Run the FastAPI server using Uvicorn
-uvicorn Main_Test_API:app --reload
+    # Run the FastAPI server using Uvicorn
+    uvicorn Main_Test_API:app --reload
 
-The API will be available at http://127.0.0.1:8000.
-</pre>
+    The API will be available at http://127.0.0.1:8000.
+    </pre>
 
 ## 🧪 How to Test The Work
 You can test the API in two ways:
 
 1. **Interactive API Docs (Recommended)**
-FastAPI automatically generates interactive documentation.
 
-With the server running, open your web browser and navigate to http://127.0.0.1:8000/docs.
+    FastAPI automatically generates interactive documentation.
 
-Expand the /recommend endpoint.
+    With the server running, open your web browser and navigate to http://127.0.0.1:8000/docs.
 
-Click "Try it out" and modify the request body to test different scenarios.
+    Expand the /recommend endpoint.
 
-Click "Execute" to see the live JSON response.
+    Click "Try it out" and modify the request body to test different scenarios.
+
+    Click "Execute" to see the live JSON response.
 
 2. **Using curl (Command Line) (Not Recommended)**
-You can also test the API from your terminal using a curl command.
 
-Example Request (with personalisation):
-<pre>
-curl -X POST "[http://127.0.0.1:8000/recommend](http://127.0.0.1:8000/recommend)" \
--H "Content-Type: application/json" \
--d '{
-  "search_term": "ท้องอืด",
-  "age": 47,
-  "gender": "female"
-}'
-</pre>
+    You can also test the API from your terminal using a curl command.
 
-Example Request (without personalisation):
-<pre>
-curl -X POST "[http://127.0.0.1:8000/recommend](http://127.0.0.1:8000/recommend)" \
--H "Content-Type: application/json" \
--d '{
-  "search_term": "คันคอ, เจ็บคอ"
-}'
-</pre>
+    Example Request (with personalisation):
+    <pre>
+    curl -X POST "[http://127.0.0.1:8000/recommend](http://127.0.0.1:8000/recommend)" \
+    -H "Content-Type: application/json" \
+    -d '{
+    "search_term": "ท้องอืด",
+    "age": 47,
+    "gender": "female"
+    }'
+    </pre>
+
+    Example Request (without personalisation):
+    <pre>
+    curl -X POST "[http://127.0.0.1:8000/recommend](http://127.0.0.1:8000/recommend)" \
+    -H "Content-Type: application/json" \
+    -d '{
+    "search_term": "คันคอ, เจ็บคอ"
+    }'
+    </pre>
